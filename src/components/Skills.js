@@ -12,7 +12,7 @@ export default function Skills() {
   ];
 
   return (
-    <section className="bg-black text-white py-20 px-6">
+    <section id="skills" className="bg-black text-white py-20 px-6">
 
       <div className="max-w-5xl mx-auto text-center">
 

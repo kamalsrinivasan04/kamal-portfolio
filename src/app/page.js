@@ -1,7 +1,10 @@
+import Image from "next/image";
 import Navbar from "../components/Navbar";
 import About from "../components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -10,6 +13,14 @@ export default function Home() {
       <Navbar />
 
       <section className="flex flex-col items-center justify-center h-[80vh] text-center px-4">
+
+        <Image
+          src="/profile.jpg"
+          width={150}
+          height={150}
+          className="rounded-full mb-6 border-4 border-blue-500"
+          alt="Kamal Srinivasan"
+        />
 
         <h1 className="text-5xl md:text-6xl font-bold">
           Hi, I'm <span className="text-blue-500">Kamal Srinivasan</span>
@@ -38,6 +49,9 @@ export default function Home() {
 
       <Projects />
 
+      <Contact />
+
+      <Footer />
     </main>
   );
 }

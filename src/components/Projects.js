@@ -1,3 +1,7 @@
+"use client";
+import { motion } from "framer-motion";
+import Image from "next/image";
+
 export default function Projects() {
 
   const projects = [
@@ -5,27 +9,38 @@ export default function Projects() {
       title: "Cognitive Companion",
       description:
         "Cross-platform application designed to support learning and helping with cognitive assistance.Developed backend APIs using Python for data handling and user interactions.Implemented authentication and database integration for secure user management.Worked with structured user data for feature tracking and analysis to support adaptive system behavior.",
+        image: "/CCP1.jpeg",
     },
     {
       title: "Web Vulnerability Scanner",
       description:
         "Developed a full stack web application using Python Flask, HTML, CSS, and JavaScript.Integrated OWASP ZAP to scan target URLs for vulnerabilities such as SQL Injection and XSS.Designed a user-friendly dashboard to display vulnerability reports by scanning 10% faster.",
+        image: "/WFP2.jpeg",
     },
     {
       title: "Portfolio Website",
       description:
         "Personal developer portfolio built using Next.js and Tailwind CSS to showcase projects and technical skills. The website features a responsive modern UI with structured sections for projects, skills, and contact information. It is deployed online and integrated with GitHub to demonstrate my work and development activity.",
+        image: "/PFP3.jpeg",
     },
     {
       title: "Human-Finder BT",
       description:
         "A four-wheeled robot prototype that locates victims using thermal sensors in disaster-prone areas, where its not possible for humans to go. Built using Arduino Uno, thermal sensors and Bluetooth module to control from a android application. ",
+        image: "/HFP4.jpeg",  
     },
     
   ];
 
   return (
-    <section id="projects" className="bg-gray-900 text-white py-20 px-6">
+      <motion.section
+        id="projects"
+        className="bg-gray-900 text-white py-20 px-6"
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
 
       <div className="max-w-6xl mx-auto">
 
@@ -38,16 +53,31 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="border border-gray-700 rounded-lg p-6 hover:border-blue-500 transition"
+              className="bg-black rounded-xl overflow-hidden shadow-lg hover:scale-105 transition duration-300"
             >
-              <h3 className="text-xl font-semibold mb-3">
-                {project.title}
-              </h3>
 
-              <p className="text-gray-400 mb-6">
-                {project.description}
-              </p>
+              {/* Project Image */}
+              <Image
+                src={project.image}
+                width={500}
+                height={300}
+                className="w-full h-48 object-cover"
+                alt={project.title}
+              />
 
+              {/* Content */}
+              <div className="p-6">
+
+                <h3 className="text-xl font-semibold mb-3">
+                  {project.title}
+                </h3>
+
+                <p className="text-gray-400 mb-6 text-sm">
+                  {project.description}
+                </p>
+
+
+              </div>
 
             </div>
           ))}
@@ -56,6 +86,6 @@ export default function Projects() {
 
       </div>
 
-    </section>
+    </motion.section>
   );
 }

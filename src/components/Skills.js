@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 export default function Skills() {
 
   const skills = [
@@ -12,7 +14,14 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="bg-black text-white py-20 px-6">
+      <motion.section
+        id="skills"
+        className="bg-black text-white py-20 px-6"
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      > 
 
       <div className="max-w-5xl mx-auto text-center">
 
@@ -35,6 +44,6 @@ export default function Skills() {
 
       </div>
 
-    </section>
+    </motion.section>
   );
 }

@@ -16,7 +16,7 @@ export default function Skills() {
   return (
       <motion.section
         id="skills"
-        className="bg-black text-white py-20 px-6"
+        className="bg-transparent text-white py-20 px-6"
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

@@ -32,7 +32,7 @@ export default function Home() {
             src="/profile.jpg"
             width={150}
             height={150}
-            className="rounded-full mb-6 border-4 border-blue-500"
+            className="rounded-full mb-4 "
             alt="Kamal"
           />
         </motion.div>
@@ -52,24 +52,25 @@ export default function Home() {
 
         <div className="mt-8 flex gap-4">
 
-          <motion.a
-            href="#projects"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg font-semibold"
-          >
-            View Projects
-          </motion.a>
+        <motion.a
+          href="#projects"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg font-semibold"
+        >
+          View Projects
+        </motion.a>
 
-          <motion.a
-            href="https://github.com/kamal-srinivasan"
-            whileHover={{ scale: 1.1 }}
-            className="border border-gray-500 hover:border-white px-6 py-3 rounded-lg"
-          >
-            GitHub
-          </motion.a>
+        <motion.a
+          href="/resume.pdf"
+          download
+          whileHover={{ scale: 1.1 }}
+          className="border border-gray-500 hover:border-white px-6 py-3 rounded-lg"
+        >
+          Download Resume
+        </motion.a>
 
-        </div>
+      </div>
 
       </motion.section>
 

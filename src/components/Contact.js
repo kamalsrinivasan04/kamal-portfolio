@@ -1,11 +1,12 @@
 "use client";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
       <motion.section
         id="contact"
-        className="bg-black text-white py-20 px-6"
+        className="bg-transparent text-white py-20 px-6"
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -23,27 +24,28 @@ export default function Contact() {
           or just connect.
         </p>
 
-        <div className="flex flex-col md:flex-row justify-center gap-6">
-
-          <a
-            href="mailto:kamalnayans1864@gmail.com"
-            className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg"
-          >
-            Email
-          </a>
+       <div className="mt-8 flex gap-4 justify-center">
 
           <a
             href="https://github.com/kamalsrinivasan04"
-            className="border border-gray-500 px-6 py-3 rounded-lg hover:border-white"
-          >
-            GitHub
+            target="_blank"
+            className="text-gray-400 hover:text-blue-400 text-4xl transition duration-300 hover:scale-125">
+            <FaGithub />
           </a>
 
           <a
-            href="https://www.linkedin.com/in/kamal-nayan-579445259"
-            className="border border-gray-500 px-6 py-3 rounded-lg hover:border-white"
+            href="https://linkedin.com/in/kamal-nayan-579445259"
+            target="_blank"
+            className="text-gray-400 hover:text-blue-400 text-4xl transition duration-300 hover:scale-125"
           >
-            LinkedIn
+            <FaLinkedin />
+          </a>
+
+          <a
+            href="mailto:kamalnayans1864@gmail.com"
+            className="text-gray-400 hover:text-blue-400 text-4xl transition duration-300 hover:scale-125"
+          >
+            <FaEnvelope />
           </a>
 
         </div>

@@ -35,7 +35,7 @@ export default function Projects() {
   return (
       <motion.section
         id="projects"
-        className="bg-gray-900 text-white py-20 px-6"
+        className="bg-transparent text-white py-20 px-6"
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -53,7 +53,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-black rounded-xl overflow-hidden shadow-lg hover:scale-105 transition duration-300"
+              className="bg-transparent rounded-xl overflow-hidden shadow-lg  hover:bg-gray-600 hover:scale-105 transition duration-300"
             >
 
               {/* Project Image */}

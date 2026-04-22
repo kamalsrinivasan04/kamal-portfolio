@@ -4,13 +4,13 @@ export default function About() {
   return (
     <motion.section
           id="about"
-          className="bg-gray-900 text-white py-20 px-6"
+          className="bg-transparent text-white py-20 px-6"
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >     
-        <div className="max-w-4xl mx-auto text-center">
+        <div className=" bg-transparent max-w-4xl mx-auto text-center">
 
         <h2 className="text-4xl font-bold mb-6">
           About Me
